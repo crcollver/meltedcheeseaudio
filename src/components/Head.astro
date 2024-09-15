@@ -1,0 +1,57 @@
+---
+import defaultImage from "../images/melted-cheese.png";
+
+interface Props {
+  title?: string;
+  description?: string;
+  image?: ImageMetadata;
+  noindex?: boolean;
+}
+
+const { title, description, image, noindex } = Astro.props;
+
+const siteTitle = "Melted Cheese Audio";
+
+const metaUrl = Astro.url.toString();
+const metaTitle = title ? `${title} | ${siteTitle}` : siteTitle;
+const metaDescription = description ?? "";
+const metaImage = image ? image : defaultImage;
+const metaImgAlt = title ?? "";
+---
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>{metaTitle}</title>
+  <link rel="icon" href="/favicon.ico" />
+
+  {
+    noindex ? (
+      <meta name="robots" content="noindex" />
+    ) : (
+      <link rel="canonical" href={metaUrl} />
+    )
+  }
+
+  <meta name="title" content={metaTitle} />
+  <meta name="url" content={metaUrl} />
+  <meta name="description" content={metaDescription} />
+  <meta name="image" content={metaImage.src} />
+  <meta name="image-alt" content={title} />
+
+  {/* OpenGraph tags */}
+  <meta property="og:site_name" content="Melted Cheese Audio" />
+  <meta property="og:url" content={metaUrl} />
+  <meta property="og:title" content={metaTitle} />
+  <meta property="og:image" content={metaImage.src} />
+  <meta property="og:alt" content={metaImgAlt} />
+  <meta property="og:description" content={metaDescription} />
+
+  {/* Twitter card tags */}
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:url" content={metaUrl} />
+  <meta name="twitter:title" content={metaTitle} />
+  <meta name="twitter:image" content={metaImage.src} />
+  <meta name="twitter:description" content={metaDescription} />
+</head>

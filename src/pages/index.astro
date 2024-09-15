@@ -1,0 +1,21 @@
+---
+import "@fontsource-variable/nunito-sans";
+import { Image } from "astro:assets";
+import cheese from "../images/melted-cheese.png";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout
+  color="bg-neutral-200"
+  description="Welcome to Melted Cheese Audio!"
+  image={cheese}
+>
+  <h1 class="text-center text-4xl lowercase hidden">Melted Cheese Audio</h1>
+  <Image
+    src={cheese}
+    alt="Melted Cheese Audio"
+    class="mt-2"
+    width="125"
+    height="125"
+  />
+</Layout>

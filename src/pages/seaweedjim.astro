@@ -1,0 +1,60 @@
+---
+import Layout from "../layouts/LinkLayout.astro";
+import seaweedJim from "../images/seaweedjim.jpg";
+import ProfileImage from "../components/ProfileImage.astro";
+import Button from "../components/Button.astro";
+import Instagram from "../icons/Instagram.astro";
+import Spotify from "../icons/Spotify.astro";
+import Youtube from "../icons/Youtube.astro";
+---
+
+<Layout
+  title="Seaweed Jim"
+  description="Contains all important links for Seaweed Jim."
+  color="bg-[#9dc293]"
+  image={seaweedJim}
+>
+  <ProfileImage image={seaweedJim} alt="Seaweed Jim" />
+  <h1 class="text-center text-3xl font-bold lowercase mt-4">Seaweed Jim</h1>
+  <div class="flex flex-wrap justify-center gap-5 mt-4">
+    <Instagram
+      class="w-6 h-6 duration-300 hover:text-amber-500"
+      link="https://www.instagram.com/seaweed_jim/"
+    />
+    <Spotify
+      class="w-6 h-6 duration-300 hover:text-amber-500"
+      link="https://open.spotify.com/artist/6xyW0VyL6KkTxDCFgJJjLd?si=OwXA49MMQteXatt0My3g1A"
+    />
+    <Youtube
+      class="w-6 h-6 duration-300 hover:text-amber-500"
+      link="https://www.youtube.com/@SeaweedJim"
+    />
+  </div>
+  <div class="flex flex-col gap-y-3 mt-4">
+    <Button
+      link="https://open.spotify.com/track/2ImqWJfzzSFa1Ggi4LLJnr?si=b8de11288fc54752"
+      text="The Werewolf EP \u{1F43A}"
+      color="bg-[#9dc293]"
+    />
+    <Button
+      link="https://open.spotify.com/track/1MKKwuMGjjpoudspN9IIlE?si=ec3f8d558e7c4d88"
+      text="Our Design"
+      color="bg-[#9dc293]"
+    />
+    <Button
+      link="https://open.spotify.com/track/6s53lMAALCU7UcS5pqx2bW?si=ee1ae6e0a1fc4b2f"
+      text="Rock Song"
+      color="bg-[#9dc293]"
+    />
+    <Button
+      link="https://open.spotify.com/track/1kTMrTysYuLxPHOg5LgLbJ?si=9f07c6cb37204daf"
+      text="Born a Thief"
+      color="bg-[#9dc293]"
+    />
+    <Button
+      link="https://www.youtube.com/watch?v=jMISIbdQxfQ"
+      text="Slimb Jimb Covers"
+      color="bg-[#9dc293]"
+    />
+  </div>
+</Layout>

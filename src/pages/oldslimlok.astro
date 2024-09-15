@@ -1,0 +1,50 @@
+---
+import Button from "../components/Button.astro";
+import Layout from "../layouts/LinkLayout.astro";
+import oldSlimLok from "../images/oldslimlok.jpg";
+import Instagram from "../icons/Instagram.astro";
+import Spotify from "../icons/Spotify.astro";
+import Youtube from "../icons/Youtube.astro";
+import ProfileImage from "../components/ProfileImage.astro";
+---
+
+<Layout
+  title="Old Slim Lok"
+  description="Contains all important links for Old Slim Lok."
+  color="bg-red-200"
+  image={oldSlimLok}
+>
+  <ProfileImage image={oldSlimLok} alt="Old Slim Lok" />
+  <h1 class="text-center text-3xl font-bold lowercase mt-4">Old Slim Lok</h1>
+  <div class="flex flex-wrap justify-center gap-5 mt-4">
+    <Instagram
+      class="w-6 h-6 duration-300 hover:text-amber-500"
+      link="https://www.instagram.com/oldslimlok/"
+    />
+    <Spotify
+      class="w-6 h-6 duration-300 hover:text-amber-500"
+      link="https://open.spotify.com/artist/0ADVjN0FIK2I0hzHmOfyiC?si=Wsg_wSjJTTSpj3FIWUaCDg"
+    />
+    <Youtube
+      class="w-6 h-6 duration-300 hover:text-amber-500"
+      link="https://www.youtube.com/@OldSlimLok"
+    />
+  </div>
+  <div class="flex flex-col gap-y-3 mt-4">
+    <Button
+      link="https://open.spotify.com/track/3N7nq2KMoyKbBt1yPDCLH9?si=08bb08c589d04bce"
+      text="Dog Song \u{1F436}"
+      color="bg-red-200"
+    />
+    <Button
+      link="https://open.spotify.com/track/1VpPyBPffLcPGFPQsCPQyq?si=3950172e325a4390"
+      text="Mushy / Sea Turtle \u{1F422}"
+      color="bg-red-200"
+    />
+    <Button
+      link="https://www.youtube.com/watch?v=i3edBJt8Ti4"
+      text="Slimb Jimb Covers!"
+      color="bg-red-200"
+    />
+  </div>
+</Layout>

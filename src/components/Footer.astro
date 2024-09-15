@@ -1,0 +1,13 @@
+---
+import { Image } from "astro:assets";
+import meltedCheese from "../images/melted-cheese.png";
+
+const year = new Date().getFullYear();
+---
+
+<footer class="flex flex-col items-center min-h-9 p-3">
+  <a href="/">
+    <Image src={meltedCheese} alt="Melted Cheese Audio" class="w-12 h-12" />
+  </a>
+  <p class="text-xs mt-2">&copy; {year}</p>
+</footer>

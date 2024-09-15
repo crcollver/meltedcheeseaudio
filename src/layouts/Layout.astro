@@ -1,0 +1,30 @@
+---
+import "@fontsource-variable/nunito-sans";
+import Head from "../components/Head.astro";
+import { boolean } from "astro:schema";
+
+interface Props {
+  title?: string;
+  description?: string;
+  color?: string;
+  image?: ImageMetadata;
+  noindex?: boolean;
+}
+
+const { title, color, description, image, noindex } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en" class={color}>
+  <Head
+    title={title}
+    description={description}
+    image={image}
+    noindex={noindex}
+  />
+  <body class="min-h-svh grid text-neutral-950">
+    <main class="flex flex-col justify-center items-center p-4">
+      <slot />
+    </main>
+  </body>
+</html>

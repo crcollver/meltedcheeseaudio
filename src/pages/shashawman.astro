@@ -1,0 +1,65 @@
+---
+import Button from "../components/Button.astro";
+import Layout from "../layouts/LinkLayout.astro";
+import shashawman from "../images/shashawman.jpg";
+import ProfileImage from "../components/ProfileImage.astro";
+import Instagram from "../icons/Instagram.astro";
+import Spotify from "../icons/Spotify.astro";
+import Youtube from "../icons/Youtube.astro";
+import Email from "../icons/Email.astro";
+import TikTok from "../icons/TikTok.astro";
+import Bandcamp from "../icons/Bandcamp.astro";
+---
+
+<Layout
+  title="Shashawman"
+  description="Contains all important links for Shashawman."
+  color="bg-[#fab992]"
+  image={shashawman}
+>
+  <ProfileImage image={shashawman} alt="Shashawman" />
+  <h1 class="text-center text-3xl font-bold lowercase mt-4">Shashawman</h1>
+  <div class="flex flex-wrap justify-center gap-5 mt-4">
+    <Instagram
+      class="w-6 h-6 duration-300 hover:text-amber-600"
+      link="https://www.instagram.com/shashawman"
+    />
+    <Spotify
+      class="w-6 h-6 duration-300 hover:text-amber-600"
+      link="https://open.spotify.com/artist/237TqUIrjTq1rDtC4jCNoL?si=6X4APzuqSb29bvoVgCvQnw"
+    />
+    <Youtube
+      class="w-6 h-6 duration-300 hover:text-amber-600"
+      link="https://www.youtube.com/@shashawman7333"
+    />
+    <Email
+      class="w-6 h-6 duration-300 hover:text-amber-600"
+      link="mailto:shashawman@gmail.com"
+    />
+    <TikTok
+      class="w-6 h-6 duration-300 hover:text-amber-600"
+      link="https://www.tiktok.com/@shashawman"
+    />
+    <Bandcamp
+      class="w-6 h-6 duration-300 hover:text-amber-600"
+      link="https://shashawman.bandcamp.com/music"
+    />
+  </div>
+  <div class="flex flex-col gap-y-3 mt-4">
+    <Button
+      link="https://open.spotify.com/track/6vJph1Zb1Wp6WRjCZgKB1E?si=b58371e7da614cfd"
+      text="Lebough's Place / Gravity Gladly"
+      color="bg-[#fab992]"
+    />
+    <Button
+      link="https://open.spotify.com/track/2xzeCj3V7shSjcMk41Ql7g?si=cc6644f25e9a4a70"
+      text="Mind Vision (The Spell) \u{1F9E0}"
+      color="bg-[#fab992]"
+    />
+    <Button
+      link="https://open.spotify.com/track/1dTyRwjmW7S2bXYoZqviZI?si=12157da202ae42bc"
+      text="Half Baked / Circles"
+      color="bg-[#fab992]"
+    />
+  </div>
+</Layout>

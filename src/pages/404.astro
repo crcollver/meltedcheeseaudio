@@ -1,0 +1,40 @@
+---
+import cheese from "../images/melted-cheese.png";
+import { Image } from "astro:assets";
+import "@fontsource-variable/nunito-sans";
+---
+
+<!doctype html>
+<html lang="en" class="bg-neutral-200">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>404 - Nothing lives here!</title>
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="robots" content="noindex" />
+  </head>
+  <body class="min-h-svh grid text-neutral-950">
+    <main class="flex flex-col justify-center items-center p-4">
+      <h1 class="text-7xl flex flex-inline items-center">
+        4
+        <Image
+          class="mx-4 text-center"
+          src={cheese}
+          alt="0"
+          width="65"
+          height="65"
+        />
+        4
+      </h1>
+      <p class="text-lg text-center mt-3">
+        There's nothing here, let
+        <a
+          class="underline decoration-dashed duration-300 hover:text-amber-600"
+          href="https://www.instagram.com/oldslimlok"
+          target="_blank"
+          rel="noopener noreferer">@oldslimlok</a
+        > know if there should be content on this page.
+      </p>
+    </main>
+  </body>
+</html>
